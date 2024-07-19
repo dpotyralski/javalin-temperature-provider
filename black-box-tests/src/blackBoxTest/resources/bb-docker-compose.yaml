@@ -1,0 +1,11 @@
+services:
+  temperature-provider:
+    build:
+      context: ../../../../
+      dockerfile: Dockerfile
+    environment:
+      CSV_FILE_PATH: /tmp/bb_example_file.csv
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/tmp
